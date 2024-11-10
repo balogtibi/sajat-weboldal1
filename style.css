@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@300;400;500;600;700;800;900&display=swap");
 
-
 * {
     margin: 0;
     padding: 0;
@@ -8,13 +7,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
 body {
     color: #ededed ;
 }
 
-
-.header {
+.header { 
     position: fixed;
     top: 0;
     left: 0;
@@ -27,7 +24,6 @@ body {
     z-index: 100;
 }
 
-
 .logo {
     position: relative;
     font-size: 25px;
@@ -35,7 +31,6 @@ body {
     text-decoration: none;
     font-weight: 600;
 }
-
 
 .logo::before {
     content: '';
@@ -49,7 +44,6 @@ body {
     animation-delay: .4s;
 }
 
-
 .navbar a {
     font-size: 18px;
     color: #ededed;
@@ -59,12 +53,10 @@ body {
     transition: .3s;
 }
 
-
 .navbar a:hover,
 .navbar a.active {
     color: #00abf0;
 }
-
 
 .home {
     height: 100vh;
@@ -76,11 +68,9 @@ body {
     padding: 0 10%;
 }
 
-
 .home-contect {
     max-width: 600px;
 }
-
 
 .home-contect h1 {
     position: relative;
@@ -88,7 +78,6 @@ body {
     font-weight: 700;
     line-height: 1.2;
 }
-
 
 .home-contect h1::before {
     content: '';
@@ -102,14 +91,12 @@ body {
     animation-delay: 1s;
 }
 
-
 .home-contect h3 {
     position: relative;
     font-size: 32px;
     font-weight: 700;
     color: #00abf0;
 }
-
 
 .home-contect h3::before {
     content: '';
@@ -123,13 +110,11 @@ body {
     animation-delay: 1.3s;
 }
 
-
 .home-contect p {
     position: relative;
     font-size: 16px;
     margin: 20px 0 40px;
 }
-
 
 .home-contect p::before {
     content: '';
@@ -143,7 +128,6 @@ body {
     animation-delay: 1.6s;
 }
 
-
 .home-contect .btn-box {
     position: relative;
     display: flex;
@@ -151,7 +135,6 @@ body {
     width: 345px;
     height: 50px;
 }
-
 
 .home-contect .btn-box::before {
     content: '';
@@ -165,8 +148,6 @@ body {
     animation-delay: 1.9s;
     z-index: 2;
 }
-
-
 
 
 .btn-box a {
@@ -189,27 +170,22 @@ body {
     transition: .5s;
 }
 
-
 .btn-box a:hover {
     color: #00abf0;
 }
-
 
 .btn-box a:nth-child(2) {
     background: transparent;
     color: #00abf0;
 }
 
-
 .btn-box a:nth-child(2):hover {
     color: #081b29;
 }
 
-
 .btn-box a:nth-child(2)::before {
     background: #00abf0;
 }
-
 
 .btn-box a::before {
     content: '';
@@ -223,11 +199,9 @@ body {
     transition: .5s;
 }
 
-
 .btn-box a:hover:before {
     width: 100%;
 }
-
 
 .home-sci{
     position: absolute ;
@@ -236,7 +210,6 @@ body {
     display: flex;
     justify-content: space-between;
 }
-
 
 .home-sci::before {
     content: '';
@@ -250,8 +223,6 @@ body {
     animation-delay: 2.5s;
     z-index: 2;
 }
-
-
 
 
 .home-sci a {
@@ -272,11 +243,9 @@ body {
     transition: .5s;
 }
 
-
 .home-sci a:hover {
     color: #081b29;
 }
-
 
 .home-sci a::before{
     content: '';
@@ -290,11 +259,9 @@ body {
     transition: .5s;
 }
 
-
 .home-sci a :hover::before {
     width: 100%;
 }
-
 
 .home-imgHover {
     position: absolute;
@@ -309,12 +276,10 @@ body {
     pointer-events: none;
 }
 
-
 .home-imgHove:hover {
     background: #081b29;
     opacity: .8;
 }
-
 
 .home-imgHover::after {
     content: '';
@@ -331,15 +296,11 @@ body {
 
 
 
-
-
-
 @keyframes showRight {
     100% {
         width: 0;
     }
 }
-
 
 @keyframes manipActiveHover {
     100% {
@@ -348,10 +309,47 @@ body {
 }
 
 
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #808080;
 
+}
 
+.block{
+    position: relative;
+    margin: 10% auto 0;
+    width: 55%;
+    height: 500px;
+    background: linear-gradient(0deg , #D0D0D0 , #D0D0D0);
+}
 
+.glow::before , .glow::after{
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg , #e6fb04 , #ff6600,#00ff66 , #00ffff , #ff00ff, #ff0099, #6e0dd0 ,  #ff3300 , #099fff);
+    background-size: 400px;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    z-index: -1;
+    animation: animate 20s linear infinite;
+  }
 
+@keyframes animate{
+  0% {
+      background-position: 0 0;
+  }
+  50%{
+      background-position: 400% 0;
+  }
+  100%{
+      background-position: 0 0; 
+  }
+}
 
-
+.glow::after{
+    filter: blur(80px);
+}
 
